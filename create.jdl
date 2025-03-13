@@ -1,0 +1,17 @@
+application {
+  config {
+    baseName WattsUpEnergy
+    applicationType monolith
+    authenticationType session
+    databaseType sql
+    prodDatabaseType mysql
+    devDatabaseType mysql
+    packageName com.alexandreburghesi.wattsupenergy
+    clientFramework angular
+    clientTheme superhero
+    clientThemeVariant dark
+    buildTool maven
+    cacheProvider ehcache
+    testFrameworks [cypress]
+  }
+}

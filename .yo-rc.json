@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "session",
+    "baseName": "WattsUpEnergy",
+    "buildTool": "maven",
+    "cacheProvider": "ehcache",
+    "clientFramework": "angular",
+    "clientTheme": "superhero",
+    "clientThemeVariant": "dark",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "entities": [],
+    "jhipsterVersion": "8.9.0",
+    "languages": ["en"],
+    "nativeLanguage": "en",
+    "packageName": "com.alexandreburghesi.wattsupenergy",
+    "prodDatabaseType": "mysql",
+    "rememberMeKey": "0e70069a99f5f1a6a358e40052066f4af261079e7074d0c935eb191f63db617cf2444be22d9818ca7c59b8db66a0a2b9be5b",
+    "testFrameworks": ["cypress"]
+  }
+}
