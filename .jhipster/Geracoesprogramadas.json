@@ -1,0 +1,16 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Lista de geração programada",
+      "fieldName": "value",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Geracoesprogramadas",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

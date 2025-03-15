@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "rest": "/cargaglobal/cargap"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Sem parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da área de carga",
+      "fieldName": "codAreacarga",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data de programação",
+      "fieldName": "datProgramacao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Instante em UTC",
+      "fieldName": "dinReferenciautc",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Carga programada (MW)",
+      "fieldName": "valCargaprogramada",
+      "fieldType": "Double"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HistoricoCargaGlobalPrevistaPorArea",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

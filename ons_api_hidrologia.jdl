@@ -1,0 +1,78 @@
+@Rest("/autenticar")
+entity AutenticacaoHidrologia {
+  usuario String /** Usuário para autenticação */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração do token */
+  refreshToken String /** Token para renovação */
+  refreshToken String /** Refresh token gerado anteriormente */
+  accessToken String /** Novo token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração do novo token */
+  refreshToken String /** Novo refresh token */
+}
+
+@Rest("/hidrologia/GrandezasHidrologicas")
+entity GrandezasHidrologicas {
+}
+
+@Rest("/hidrologia/PrecipitacaoObservada")
+entity PrecipitacaoObservada {
+  idestacaometeo String /** Identificador da estação meteorológica */
+  datainicialmedicao String /** Data inicial do período de medição */
+  datafinalmedicao String /** Data final do período de medição */
+}
+
+@Rest("/hidrologia/reservatorios")
+entity Reservatorio {
+  identificador String /** Identificador do reservatório */
+  nomecurto String /** Nome curto do reservatório */
+}
+
+@Rest("/hidrologia/previsoes/{reservatorio}/vazao-diaria")
+entity GrandezasPrevistas {
+  reservatorio String /** Identificador do reservatório */
+  datainicioprevisao String /** Data de início da previsão */
+  datavalidadeprevisao String /** Data de validade da previsão */
+}
+
+@Rest("/hidrologia/reservatorios/{Identificador}/afluencia")
+entity GrandezasVerificadas {
+  identificador String /** Identificador do reservatório */
+  inicio String /** Data e hora de início do período */
+  fim String /** Data e hora de fim do período */
+}
+
+entity Resultados {
+  value TextBlob /** Lista de objetos GrandezaHidrologica */
+}
+
+relationship OneToMany {
+  GrandezasHidrologicas{resultados} to Resultados
+  PrecipitacaoObservada{resultados} to Resultados
+  Reservatorio{resultados} to Resultados
+  GrandezasPrevistas{resultados} to Resultados
+  GrandezasVerificadas{resultados} to Resultados
+}
+
+paginate AutenticacaoHidrologia with pagination
+filter AutenticacaoHidrologia
+
+paginate GrandezasHidrologicas with pagination
+filter GrandezasHidrologicas
+
+paginate PrecipitacaoObservada with pagination
+filter PrecipitacaoObservada
+
+paginate Reservatorio with pagination
+filter Reservatorio
+
+paginate GrandezasPrevistas with pagination
+filter GrandezasPrevistas
+
+paginate GrandezasVerificadas with pagination
+filter GrandezasVerificadas
+
+paginate Resultados with pagination
+filter Resultados

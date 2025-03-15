@@ -1,0 +1,31 @@
+{
+  "wattsUpEnergyApp": {
+    "apiindicador": {
+      "home": {
+        "title": "Apiindicadors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Apiindicador",
+        "createOrEditLabel": "Create or edit a Apiindicador",
+        "notFound": "No Apiindicadors found"
+      },
+      "created": "A new Apiindicador is created with identifier {{ param }}",
+      "updated": "A Apiindicador is updated with identifier {{ param }}",
+      "deleted": "A Apiindicador is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Apiindicador {{ id }}?"
+      },
+      "detail": {
+        "title": "Apiindicador"
+      },
+      "id": "ID",
+      "filtro": "Filtro",
+      "dadosindicador": "Dadosindicador",
+      "chave": "Chave",
+      "help": {
+        "filtro": "Parâmetros para consulta de indicadores",
+        "dadosindicador": "Dados do indicador a ser cadastrado",
+        "chave": "Chave do indicador a ser excluído"
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "annotations": {
+    "rest": "/programacao/repdoe/GeracaoMedioDiario"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Não há parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da região",
+      "fieldName": "regiao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Descrição da região",
+      "fieldName": "regiaodescricao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Sigla da região",
+      "fieldName": "regiaosigla",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Ano do PDP",
+      "fieldName": "ano",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Mês do PDP",
+      "fieldName": "mes",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Dia do PDP",
+      "fieldName": "dia",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Início do processamento",
+      "fieldName": "inicioprocessamento",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Término do processamento",
+      "fieldName": "terminoprocessamento",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Balancoprogramado",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "geracoesprogramadas",
+      "relationshipName": "geracoesprogramadas",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cargasprogramadas",
+      "relationshipName": "cargasprogramadas",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "intercambiosprogramados",
+      "relationshipName": "intercambiosprogramados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

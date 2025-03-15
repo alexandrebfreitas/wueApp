@@ -52,6 +52,13 @@ public class CacheConfiguration {
             createCache(cm, com.alexandreburghesi.wattsupenergy.domain.User.class.getName() + ".authorities");
             createCache(cm, com.alexandreburghesi.wattsupenergy.domain.PersistentToken.class.getName());
             createCache(cm, com.alexandreburghesi.wattsupenergy.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Apiassistencia.class.getName());
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Apiassistencia.class.getName() + ".assistencias");
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Apidiaexcepcional.class.getName());
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Apiindicador.class.getName());
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Apiperiodoassistencia.class.getName());
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Assistencias.class.getName());
+            createCache(cm, com.alexandreburghesi.wattsupenergy.domain.Autenticacao.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

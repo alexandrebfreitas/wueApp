@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052105",
+    "rest": "/teleassistencia/assistencia/ConsultaAssistencia"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Parâmetros de filtro para consulta",
+      "fieldName": "filtro",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Dados atualizados da assistência",
+      "fieldName": "dadosassistencia",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Chave identificadora da assistência",
+      "fieldName": "chave",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Apiassistencia",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "assistencias",
+      "relationshipName": "assistencias",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

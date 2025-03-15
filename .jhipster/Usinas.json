@@ -1,0 +1,16 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Lista de usinas com geração proposta",
+      "fieldName": "value",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Usinas",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

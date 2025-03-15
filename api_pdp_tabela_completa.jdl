@@ -1,0 +1,141 @@
+@Rest("/autenticar")
+entity Autenticacao {
+  usuario String /** Mesmo usuário do SINTEGRE */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Token para renovação */
+  error String /** Erro na autenticação */
+  errorDescription String /** Detalhes do erro */
+  refreshToken String /** Refresh token gerado */
+  accessToken String /** Token de acesso renovado */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Novo token para renovação */
+  error String /** Erro na renovação */
+  errorDescription String /** Detalhes do erro */
+}
+
+@Rest("/programacao/repdoe/GeracaoMedioDiario")
+entity Balancoprogramado {
+  nenhuma String /** Não há parâmetros */
+  regiao String /** Código da região */
+  regiaodescricao String /** Descrição da região */
+  regiaosigla String /** Sigla da região */
+  ano Integer /** Ano do PDP */
+  mes Integer /** Mês do PDP */
+  dia Integer /** Dia do PDP */
+  inicioprocessamento String /** Início do processamento */
+  terminoprocessamento String /** Término do processamento */
+  nenhuma String /** Não há parâmetros */
+  ano Integer /** Ano do PDP */
+  mes Integer /** Mês do PDP */
+  dia Integer /** Dia do PDP */
+  inicioprocessamento String /** Início do processamento */
+  terminoprocessamento String /** Término do processamento */
+  nenhuma String /** Não há parâmetros */
+  ano Integer /** Ano do PDP */
+  mes Integer /** Mês do PDP */
+  dia Integer /** Dia do PDP */
+  inicioprocessamento String /** Início do processamento */
+  terminoprocessamento String /** Término do processamento */
+}
+
+@Rest("/programacao/empresasrepresentadas")
+entity Empresa {
+  nenhuma String /** Não há parâmetros */
+  codigo String /** Código da empresa */
+  nome String /** Nome da empresa */
+  sigla String /** Sigla da empresa */
+  bdtId String /** Identificador na BDT */
+  regiao String /** Código da região */
+  regiaodescricao String /** Descrição da região */
+  regiaosigla String /** Sigla da região */
+}
+
+@Rest("/programacao/usina/ListarUsinasRepresentadas")
+entity Usina {
+  nenhuma String /** Não há parâmetros */
+  codigo String /** Código da usina */
+  nome String /** Nome da usina */
+  tipo String /** Tipo de usina (ex.: UHE) */
+  prioridade Integer /** Prioridade (opcional) */
+  datapdp String /** Data do PDP */
+  patamarnumero Integer /** Número do patamar */
+  patamarhora String /** Hora do patamar (readOnly) */
+  patamarvalorEmp Integer /** Valor do insumo – Empresa */
+  patamarvalorPro Integer /** Valor do insumo – Proposta */
+  patamarvalorPre Integer /** Valor do insumo – Pré-aprovação */
+  patamarvalorSup Integer /** Valor do insumo – Supervisão */
+  ano Integer /** Ano do PDP */
+  mes Integer /** Mês do PDP */
+  dia Integer /** Dia do PDP */
+  codigosusinas String /** Códigos das usinas (opcional) */
+  inicioprocessamento String /** Início do processamento */
+  terminoprocessamento String /** Término do processamento */
+  requestAno Integer /** Ano do PDP */
+  requestMes Integer /** Mês do PDP */
+  requestDia Integer /** Dia do PDP */
+  requestNumeropaginacao Integer /** Número da página */
+  requestQuantidadepagina Integer /** Itens por página */
+  requestCodigosusinas String /** Códigos (opcional) */
+  inicioprocessamento String /** Início do processamento */
+  terminoprocessamento String /** Término do processamento */
+}
+
+entity Geracoesprogramadas {
+  value TextBlob /** Lista de geração programada */
+}
+
+entity Cargasprogramadas {
+  value TextBlob /** Lista de carga programada */
+}
+
+entity Intercambiosprogramados {
+  value TextBlob /** Lista de intercâmbios programados */
+}
+
+entity Dadoinsumopatamar {
+  value TextBlob /** Lista de dados de insumo */
+}
+
+entity Usinas {
+  value TextBlob /** Lista de usinas com geração proposta */
+}
+
+relationship OneToMany {
+  Balancoprogramado{geracoesprogramadas} to Geracoesprogramadas
+  Balancoprogramado{cargasprogramadas} to Cargasprogramadas
+  Balancoprogramado{intercambiosprogramados} to Intercambiosprogramados
+  Usina{dadoinsumopatamar} to Dadoinsumopatamar
+  Usina{usinas} to Usinas
+  Usina{usinas} to Usinas
+}
+
+paginate Autenticacao with pagination
+filter Autenticacao
+
+paginate Balancoprogramado with pagination
+filter Balancoprogramado
+
+paginate Empresa with pagination
+filter Empresa
+
+paginate Usina with pagination
+filter Usina
+
+paginate Geracoesprogramadas with pagination
+filter Geracoesprogramadas
+
+paginate Cargasprogramadas with pagination
+filter Cargasprogramadas
+
+paginate Intercambiosprogramados with pagination
+filter Intercambiosprogramados
+
+paginate Dadoinsumopatamar with pagination
+filter Dadoinsumopatamar
+
+paginate Usinas with pagination
+filter Usinas

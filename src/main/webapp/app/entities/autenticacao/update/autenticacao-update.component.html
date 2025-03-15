@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-autenticacao-heading"
+        data-cy="AutenticacaoCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.autenticacao.home.createOrEditLabel"
+      >
+        Create or edit a Autenticacao
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.autenticacao.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_usuario"
+            [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.usuario' | translate"
+            jhiTranslate="wattsUpEnergyApp.autenticacao.usuario"
+            >Usuario</label
+          >
+          <input type="text" class="form-control" name="usuario" id="field_usuario" data-cy="usuario" formControlName="usuario" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_senha"
+            [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.senha' | translate"
+            jhiTranslate="wattsUpEnergyApp.autenticacao.senha"
+            >Senha</label
+          >
+          <input type="text" class="form-control" name="senha" id="field_senha" data-cy="senha" formControlName="senha" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_accessToken"
+            [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.accessToken' | translate"
+            jhiTranslate="wattsUpEnergyApp.autenticacao.accessToken"
+            >Access Token</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="accessToken"
+            id="field_accessToken"
+            data-cy="accessToken"
+            formControlName="accessToken"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_tokenType"
+            [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.tokenType' | translate"
+            jhiTranslate="wattsUpEnergyApp.autenticacao.tokenType"
+            >Token Type</label
+          >
+          <input type="text" class="form-control" name="tokenType" id="field_tokenType" data-cy="tokenType" formControlName="tokenType" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

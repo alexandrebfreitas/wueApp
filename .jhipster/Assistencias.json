@@ -1,0 +1,19 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052109"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Lista de assistências encontradas",
+      "fieldName": "value",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Assistencias",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

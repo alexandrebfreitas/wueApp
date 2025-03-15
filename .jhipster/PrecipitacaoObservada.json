@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "rest": "/hidrologia/PrecipitacaoObservada"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Identificador da estação meteorológica",
+      "fieldName": "idestacaometeo",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data inicial do período de medição",
+      "fieldName": "datainicialmedicao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data final do período de medição",
+      "fieldName": "datafinalmedicao",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "PrecipitacaoObservada",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "resultados",
+      "relationshipName": "resultados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

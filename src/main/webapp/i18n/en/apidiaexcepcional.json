@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "apidiaexcepcional": {
+      "home": {
+        "title": "Apidiaexcepcionals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Apidiaexcepcional",
+        "createOrEditLabel": "Create or edit a Apidiaexcepcional",
+        "notFound": "No Apidiaexcepcionals found"
+      },
+      "created": "A new Apidiaexcepcional is created with identifier {{ param }}",
+      "updated": "A Apidiaexcepcional is updated with identifier {{ param }}",
+      "deleted": "A Apidiaexcepcional is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Apidiaexcepcional {{ id }}?"
+      },
+      "detail": {
+        "title": "Apidiaexcepcional"
+      },
+      "id": "ID",
+      "dadosdiaexcepcional": "Dadosdiaexcepcional",
+      "chave": "Chave",
+      "help": {
+        "dadosdiaexcepcional": "Dados do dia excepcional",
+        "chave": "Chave do dia excepcional a ser excluído"
+      }
+    }
+  }
+}

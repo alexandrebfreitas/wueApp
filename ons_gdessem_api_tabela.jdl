@@ -1,0 +1,16 @@
+@Rest("/dessem/arquivosrodada/{dataRodada}")
+entity Rodadadessem {
+  datarodada String /** Data alvo da rodada no formato 'yyyy-mm-dd'. */
+  datarodada String /** Data da rodada conforme registrada no retorno. */
+  entradasmontador String /** Lista de nomes dos decks de entrada. */
+  saidasmontador String /** Lista de nomes dos decks de saída. */
+  resultadosdessem String /** Lista de nomes dos arquivos de resultados. */
+  datarodada String /** Data alvo da rodada, formato 'yyyy-mm-dd' (ex: '2021-08-20T12:22:00.126Z'). */
+  entradasmontador String /** Lista de decks de entrada a serem incluídos no pacote. */
+  saidasmontador String /** Lista de decks de saída a serem incluídos no pacote. */
+  resultadosdessem String /** Lista de decks de resultados a serem incluídos no pacote. */
+  arquivoZip String /** Streaming de um arquivo .zip com a estrutura dos arquivos (diretórios criados quando necessário). */
+}
+
+paginate Rodadadessem with pagination
+filter Rodadadessem

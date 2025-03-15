@@ -1,0 +1,33 @@
+{
+  "wattsUpEnergyApp": {
+    "autenticacao": {
+      "home": {
+        "title": "Autenticacaos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Autenticacao",
+        "createOrEditLabel": "Create or edit a Autenticacao",
+        "notFound": "No Autenticacaos found"
+      },
+      "created": "A new Autenticacao is created with identifier {{ param }}",
+      "updated": "A Autenticacao is updated with identifier {{ param }}",
+      "deleted": "A Autenticacao is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Autenticacao {{ id }}?"
+      },
+      "detail": {
+        "title": "Autenticacao"
+      },
+      "id": "ID",
+      "usuario": "Usuario",
+      "senha": "Senha",
+      "accessToken": "Access Token",
+      "tokenType": "Token Type",
+      "help": {
+        "usuario": "Usuário para autenticação",
+        "senha": "Senha do usuário",
+        "accessToken": "Token de acesso",
+        "tokenType": "Tipo do token"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "wattsUpEnergyApp": {
+    "apiperiodoassistencia": {
+      "home": {
+        "title": "Apiperiodoassistencias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Apiperiodoassistencia",
+        "createOrEditLabel": "Create or edit a Apiperiodoassistencia",
+        "notFound": "No Apiperiodoassistencias found"
+      },
+      "created": "A new Apiperiodoassistencia is created with identifier {{ param }}",
+      "updated": "A Apiperiodoassistencia is updated with identifier {{ param }}",
+      "deleted": "A Apiperiodoassistencia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Apiperiodoassistencia {{ id }}?"
+      },
+      "detail": {
+        "title": "Apiperiodoassistencia"
+      },
+      "id": "ID",
+      "dadosperiodo": "Dadosperiodo",
+      "chave": "Chave",
+      "help": {
+        "dadosperiodo": "Dados do período a ser cadastrado",
+        "chave": "Chave do período a ser excluído"
+      }
+    }
+  }
+}

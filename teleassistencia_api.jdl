@@ -1,0 +1,60 @@
+@Rest("/autenticar")
+entity Autenticacao {
+  usuario String /** Usuário para autenticação */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+}
+
+@Rest("/teleassistencia/assistencia/ConsultaAssistencia")
+entity Apiassistencia {
+  filtro TextBlob /** Parâmetros de filtro para consulta */
+  dadosassistencia TextBlob /** Dados para cadastro da assistência */
+  dadosassistencia TextBlob /** Dados atualizados da assistência */
+  chave String /** Chave identificadora da assistência */
+}
+
+@Rest("/teleassistencia/diaexcepcional/CadastrarDiaExcepcional")
+entity Apidiaexcepcional {
+  dadosdiaexcepcional TextBlob /** Dados do dia excepcional */
+  chave String /** Chave do dia excepcional a ser excluído */
+}
+
+@Rest("/teleassistencia/indicador/ConsultaIndicador")
+entity Apiindicador {
+  filtro TextBlob /** Parâmetros para consulta de indicadores */
+  dadosindicador TextBlob /** Dados do indicador a ser cadastrado */
+  chave String /** Chave do indicador a ser excluído */
+}
+
+@Rest("/teleassistencia/periodo/CadastrarPeriodo")
+entity Apiperiodoassistencia {
+  dadosperiodo TextBlob /** Dados do período a ser cadastrado */
+  chave String /** Chave do período a ser excluído */
+}
+
+entity Assistencias {
+  value TextBlob /** Lista de assistências encontradas */
+}
+
+relationship OneToMany {
+  Apiassistencia{assistencias} to Assistencias
+}
+
+paginate Autenticacao with pagination
+filter Autenticacao
+
+paginate Apiassistencia with pagination
+filter Apiassistencia
+
+paginate Apidiaexcepcional with pagination
+filter Apidiaexcepcional
+
+paginate Apiindicador with pagination
+filter Apiindicador
+
+paginate Apiperiodoassistencia with pagination
+filter Apiperiodoassistencia
+
+paginate Assistencias with pagination
+filter Assistencias

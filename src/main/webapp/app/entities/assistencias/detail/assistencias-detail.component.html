@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (assistencias(); as assistenciasRef) {
+      <div>
+        <h2 data-cy="assistenciasDetailsHeading"><span jhiTranslate="wattsUpEnergyApp.assistencias.detail.title">Assistencias</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ assistenciasRef.id }}</span>
+          </dd>
+          <dt>
+            <span [ngbTooltip]="'wattsUpEnergyApp.assistencias.help.value' | translate" jhiTranslate="wattsUpEnergyApp.assistencias.value"
+              >Value</span
+            >
+          </dt>
+          <dd>
+            <span>{{ assistenciasRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="wattsUpEnergyApp.assistencias.apiassistencia">Apiassistencia</span></dt>
+          <dd>
+            @if (assistencias()!.apiassistencia) {
+              <div>
+                <a [routerLink]="['/apiassistencia', assistencias()!.apiassistencia?.id, 'view']">{{
+                  assistenciasRef.apiassistencia?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/assistencias', assistenciasRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,53 @@
+{
+  "annotations": {
+    "rest": "/programacao/empresasrepresentadas"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Não há parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da empresa",
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Nome da empresa",
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Sigla da empresa",
+      "fieldName": "sigla",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Identificador na BDT",
+      "fieldName": "bdtId",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da região",
+      "fieldName": "regiao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Descrição da região",
+      "fieldName": "regiaodescricao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Sigla da região",
+      "fieldName": "regiaosigla",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Empresa",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

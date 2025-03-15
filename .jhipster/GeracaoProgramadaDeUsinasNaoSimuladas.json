@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "rest": "/usinas/geracaoprogramada"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Sem parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Núcleo do código CEG ANEEL",
+      "fieldName": "codNucleoceganeel",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código CEG completo da usina",
+      "fieldName": "codCeg",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Nome da usina na ANEEL",
+      "fieldName": "nomAneel",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data de referência",
+      "fieldName": "datReferencia",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "ID da usina na BDT do ONS",
+      "fieldName": "usiId",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "ID da usina na PDP",
+      "fieldName": "pdpId",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Tipo de fonte (ex.: Hídrica)",
+      "fieldName": "dscTpfonteusianeelorigem",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Origem da previsão (ex.: Média Semanal com Perfil Médio)",
+      "fieldName": "dscOrigemprevisao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Valor de geração programada (MW)",
+      "fieldName": "valCargaprogramada",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Instante de referência (UTC)",
+      "fieldName": "dinReferenciautc",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "GeracaoProgramadaDeUsinasNaoSimuladas",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

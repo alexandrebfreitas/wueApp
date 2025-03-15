@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052107",
+    "rest": "/teleassistencia/indicador/ConsultaIndicador"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Parâmetros para consulta de indicadores",
+      "fieldName": "filtro",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Dados do indicador a ser cadastrado",
+      "fieldName": "dadosindicador",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Chave do indicador a ser excluído",
+      "fieldName": "chave",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Apiindicador",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

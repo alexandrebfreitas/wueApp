@@ -1,0 +1,81 @@
+@Rest("/autenticar")
+entity Autenticacao {
+  usuario String /** Usuário para autenticação */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração do token */
+  refreshToken String /** Token para renovação */
+  refreshToken String /** Refresh token gerado anteriormente */
+  accessToken String /** Novo token de acesso */
+  tokenType String /** Tipo do novo token */
+  expiresIn String /** Tempo de expiração do novo token */
+  refreshToken String /** Novo refresh token */
+}
+
+@Rest("/site/mpo/")
+entity ProcedimentosOperativosDeRede {
+  status String /** Confirmação do processamento */
+}
+
+@Rest("/site/mpo/fragmentos")
+entity Fragmentos {
+  arquivozip String /** Arquivo ZIP com os fragmentos */
+}
+
+@Rest("/energiaagora/GetBalancoEnergetico/null")
+entity Energiaagora {
+}
+
+@Rest("/hidrologia/GrandezasHidrologicas")
+entity HidrologiaGrandezasHidrologicas {
+}
+
+@Rest("/hidrologia/PrecipitacaoObservada")
+entity HidrologiaPrecipitacaoObservada {
+  idestacaometeo String /** Identificador da estação meteorológica */
+  datainicialmedicao String /** Data inicial do período de medição */
+  datafinalmedicao String /** Data final do período de medição */
+}
+
+@Rest("/hidrologia/reservatorios")
+entity HidrologiaReservatorios {
+  identificador String /** Identificador do reservatório */
+  nomecurto String /** Nome curto do reservatório */
+}
+
+entity Resultados {
+  value TextBlob /** Lista de dados do balanço energético */
+}
+
+relationship OneToMany {
+  Energiaagora{resultados} to Resultados
+  Energiaagora{resultados} to Resultados
+  HidrologiaGrandezasHidrologicas{resultados} to Resultados
+  HidrologiaPrecipitacaoObservada{resultados} to Resultados
+  HidrologiaReservatorios{resultados} to Resultados
+}
+
+paginate Autenticacao with pagination
+filter Autenticacao
+
+paginate ProcedimentosOperativosDeRede with pagination
+filter ProcedimentosOperativosDeRede
+
+paginate Fragmentos with pagination
+filter Fragmentos
+
+paginate Energiaagora with pagination
+filter Energiaagora
+
+paginate HidrologiaGrandezasHidrologicas with pagination
+filter HidrologiaGrandezasHidrologicas
+
+paginate HidrologiaPrecipitacaoObservada with pagination
+filter HidrologiaPrecipitacaoObservada
+
+paginate HidrologiaReservatorios with pagination
+filter HidrologiaReservatorios
+
+paginate Resultados with pagination
+filter Resultados

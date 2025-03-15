@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "rest": "/hidrologia/reservatorios"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Identificador do reservatório",
+      "fieldName": "identificador",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Nome curto do reservatório",
+      "fieldName": "nomecurto",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HidrologiaReservatorios",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "resultados",
+      "relationshipName": "resultados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

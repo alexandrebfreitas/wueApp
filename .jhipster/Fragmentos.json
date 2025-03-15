@@ -1,0 +1,18 @@
+{
+  "annotations": {
+    "rest": "/site/mpo/fragmentos"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Arquivo ZIP com os fragmentos",
+      "fieldName": "arquivozip",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Fragmentos",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

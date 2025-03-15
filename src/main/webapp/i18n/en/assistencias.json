@@ -1,0 +1,28 @@
+{
+  "wattsUpEnergyApp": {
+    "assistencias": {
+      "home": {
+        "title": "Assistencias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Assistencias",
+        "createOrEditLabel": "Create or edit a Assistencias",
+        "notFound": "No Assistencias found"
+      },
+      "created": "A new Assistencias is created with identifier {{ param }}",
+      "updated": "A Assistencias is updated with identifier {{ param }}",
+      "deleted": "A Assistencias is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Assistencias {{ id }}?"
+      },
+      "detail": {
+        "title": "Assistencias"
+      },
+      "id": "ID",
+      "value": "Value",
+      "apiassistencia": "Apiassistencia",
+      "help": {
+        "value": "Lista de assistências encontradas"
+      }
+    }
+  }
+}

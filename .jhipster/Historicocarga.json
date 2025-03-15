@@ -1,0 +1,16 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Cada item: Instante, CargaEnergiaGWh, CargaEnergiaMWMed, IdSubSistema",
+      "fieldName": "value",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Historicocarga",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

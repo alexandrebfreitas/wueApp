@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "rest": "/autenticar"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Usuário para autenticação",
+      "fieldName": "usuario",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Senha do usuário",
+      "fieldName": "senha",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Novo token de acesso",
+      "fieldName": "accessToken",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Tipo do token",
+      "fieldName": "tokenType",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Tempo de expiração do novo token",
+      "fieldName": "expiresIn",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Novo refresh token",
+      "fieldName": "refreshToken",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "AutenticacaoHidrologia",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

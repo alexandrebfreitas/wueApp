@@ -1,0 +1,82 @@
+@Rest("/autenticar")
+entity Autenticacao {
+  usuario String /** Mesmo usuário do SINTEGRE */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Token para renovação */
+  error String /** Erro na autenticação */
+  errorDescription String /** Detalhes do erro */
+  refreshToken String /** Refresh token gerado */
+  accessToken String /** Token de acesso renovado */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Novo refresh token */
+  error String /** Erro na renovação */
+  errorDescription String /** Detalhes do erro */
+}
+
+@Rest("/apuracaotransmissao/BuscarAVCPorIdTransmissora")
+entity AvisosDeCreditoEDebito {
+  cdidempresatransmissora String /** Código da empresa transmissora */
+  apuracao Integer /** Ano e mês da apuração (aaaamm, ex: 202110) */
+  numeropagina Integer /** Número da página (default: 1) */
+  quantidaderegistrospagina Integer /** Registros por página (default: 2000) */
+  pagina Integer /** Página atual */
+  qtdepaginas Integer /** Total de páginas */
+  transmissora String /** Nome da transmissora */
+  codigotransmissora String /** Código da transmissora */
+  mesanoapuracao Integer /** Apuração (aaaamm) */
+  usuaria String /** Nome da usuária */
+  cnpj String /** CNPJ da usuária */
+  codigousuaria String /** Código da usuária */
+  tributos Double /** Tributos */
+  valortotal Double /** Valor total */
+  numparcela Integer /** Número da parcela */
+  data String /** Data da parcela */
+  valor Double /** Valor da parcela */
+  cdidempresausuaria String /** Código da empresa usuária */
+  apuracao Integer /** Apuração (aaaamm) */
+  numeropagina Integer /** Página (default: 1) */
+  quantidaderegistrospagina Integer /** Registros por página (default: 2000) */
+  pagina Integer /** Página atual */
+  qtdepaginas Integer /** Total de páginas */
+  usuaria String /** Nome da usuária */
+  codigousuaria String /** Código da usuária */
+  mesanoapuracao Integer /** Apuração (aaaamm) */
+}
+
+@Rest("/apuracaotransmissao/BuscarListaAgentes")
+entity Agentes {
+  apuracao Integer /** Apuração (aaaamm) */
+}
+
+entity Transmissoras {
+  value TextBlob /** Lista com campos: usuaria, cnpj, codigoUsuaria, tributos, valorTotal, parcelas */
+}
+
+entity Usuarias {
+  value TextBlob /** Cada item com: usuaria (string) e codigoUsuaria (string) */
+}
+
+relationship OneToMany {
+  AvisosDeCreditoEDebito{transmissoras} to Transmissoras
+  Agentes{transmissoras} to Transmissoras
+  Agentes{usuarias} to Usuarias
+}
+
+paginate Autenticacao with pagination
+filter Autenticacao
+
+paginate AvisosDeCreditoEDebito with pagination
+filter AvisosDeCreditoEDebito
+
+paginate Agentes with pagination
+filter Agentes
+
+paginate Transmissoras with pagination
+filter Transmissoras
+
+paginate Usuarias with pagination
+filter Usuarias

@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (apiindicador(); as apiindicadorRef) {
+      <div>
+        <h2 data-cy="apiindicadorDetailsHeading"><span jhiTranslate="wattsUpEnergyApp.apiindicador.detail.title">Apiindicador</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ apiindicadorRef.id }}</span>
+          </dd>
+          <dt>
+            <span [ngbTooltip]="'wattsUpEnergyApp.apiindicador.help.filtro' | translate" jhiTranslate="wattsUpEnergyApp.apiindicador.filtro"
+              >Filtro</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiindicadorRef.filtro }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.apiindicador.help.dadosindicador' | translate"
+              jhiTranslate="wattsUpEnergyApp.apiindicador.dadosindicador"
+              >Dadosindicador</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiindicadorRef.dadosindicador }}</span>
+          </dd>
+          <dt>
+            <span [ngbTooltip]="'wattsUpEnergyApp.apiindicador.help.chave' | translate" jhiTranslate="wattsUpEnergyApp.apiindicador.chave"
+              >Chave</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiindicadorRef.chave }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/apiindicador', apiindicadorRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

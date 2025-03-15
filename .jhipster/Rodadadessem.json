@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "rest": "/dessem/arquivosrodada/{dataRodada}"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Data alvo da rodada, formato 'yyyy-mm-dd' (ex: '2021-08-20T12:22:00.126Z').",
+      "fieldName": "datarodada",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Lista de decks de entrada a serem incluídos no pacote.",
+      "fieldName": "entradasmontador",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Lista de decks de saída a serem incluídos no pacote.",
+      "fieldName": "saidasmontador",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Lista de decks de resultados a serem incluídos no pacote.",
+      "fieldName": "resultadosdessem",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Streaming de um arquivo .zip com a estrutura dos arquivos (diretórios criados quando necessário).",
+      "fieldName": "arquivoZip",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Rodadadessem",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

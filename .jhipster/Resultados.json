@@ -1,0 +1,16 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Lista de dados do balanço energético",
+      "fieldName": "value",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Resultados",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

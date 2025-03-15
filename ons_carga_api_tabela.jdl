@@ -1,0 +1,90 @@
+@Rest("/autenticar")
+entity Autenticacao {
+  usuario String /** Mesmo usuário do SINTEGRE */
+  senha String /** Senha do usuário */
+  accessToken String /** Token de acesso */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Token para renovação */
+  error String /** Erro na autenticação */
+  errorDescription String /** Detalhes do erro */
+  refreshToken String /** Refresh token gerado */
+  accessToken String /** Token de acesso renovado */
+  tokenType String /** Tipo do token */
+  expiresIn String /** Tempo de expiração */
+  refreshToken String /** Novo token para renovação */
+  error String /** Erro na renovação */
+  errorDescription String /** Detalhes do erro */
+}
+
+@Rest("/cargaglobal/historicocargaglobal/{tipoHistorico}")
+entity HistoricoCargaGlobal {
+  tipohistorico String /** Ex: Diario, Semanal, Mensal, Anual */
+  pagina Integer /** Página atual */
+  tamanhopagina Integer /** Registros por página */
+  total Integer /** Total de registros */
+  quantidadepaginas Integer /** Total de páginas */
+}
+
+@Rest("/cargaglobal/cargav")
+entity HistoricoCargaGlobalVerificadaPorArea {
+  nenhuma String /** Sem parâmetros */
+  codAreacarga String /** Código da área de carga */
+  datReferencia String /** Data da medição (horário de Brasília) */
+  dinReferenciautc String /** Data/hora em UTC */
+  valCargaglobal Double /** Carga global (MW) */
+  valCargaglobalcons Double /** Carga global consistente (MW) */
+  valConsistencia Double /** Valor de consistência */
+  valCargasup Double /** Carga supervisionada */
+  valCargansup Double /** Carga não supervisionada */
+}
+
+@Rest("/cargaglobal/cargap")
+entity HistoricoCargaGlobalPrevistaPorArea {
+  nenhuma String /** Sem parâmetros */
+  codAreacarga String /** Código da área de carga */
+  datProgramacao String /** Data de programação */
+  dinReferenciautc String /** Instante em UTC */
+  valCargaprogramada Double /** Carga programada (MW) */
+}
+
+@Rest("/usinas/geracaoprogramada")
+entity GeracaoProgramadaDeUsinasNaoSimuladas {
+  nenhuma String /** Sem parâmetros */
+  codNucleoceganeel String /** Núcleo do código CEG ANEEL */
+  codCeg String /** Código CEG completo da usina */
+  nomAneel String /** Nome da usina na ANEEL */
+  datReferencia String /** Data de referência */
+  usiId String /** ID da usina na BDT do ONS */
+  pdpId String /** ID da usina na PDP */
+  dscTpfonteusianeelorigem String /** Tipo de fonte (ex.: Hídrica) */
+  dscOrigemprevisao String /** Origem da previsão (ex.: Média Semanal com Perfil Médio) */
+  valCargaprogramada Double /** Valor de geração programada (MW) */
+  dinReferenciautc String /** Instante de referência (UTC) */
+}
+
+entity Historicocarga {
+  value TextBlob /** Cada item: Instante, CargaEnergiaGWh, CargaEnergiaMWMed, IdSubSistema */
+}
+
+relationship OneToMany {
+  HistoricoCargaGlobal{historicocarga} to Historicocarga
+}
+
+paginate Autenticacao with pagination
+filter Autenticacao
+
+paginate HistoricoCargaGlobal with pagination
+filter HistoricoCargaGlobal
+
+paginate HistoricoCargaGlobalVerificadaPorArea with pagination
+filter HistoricoCargaGlobalVerificadaPorArea
+
+paginate HistoricoCargaGlobalPrevistaPorArea with pagination
+filter HistoricoCargaGlobalPrevistaPorArea
+
+paginate GeracaoProgramadaDeUsinasNaoSimuladas with pagination
+filter GeracaoProgramadaDeUsinasNaoSimuladas
+
+paginate Historicocarga with pagination
+filter Historicocarga

@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autenticacao(); as autenticacaoRef) {
+      <div>
+        <h2 data-cy="autenticacaoDetailsHeading"><span jhiTranslate="wattsUpEnergyApp.autenticacao.detail.title">Autenticacao</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ autenticacaoRef.id }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.usuario' | translate"
+              jhiTranslate="wattsUpEnergyApp.autenticacao.usuario"
+              >Usuario</span
+            >
+          </dt>
+          <dd>
+            <span>{{ autenticacaoRef.usuario }}</span>
+          </dd>
+          <dt>
+            <span [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.senha' | translate" jhiTranslate="wattsUpEnergyApp.autenticacao.senha"
+              >Senha</span
+            >
+          </dt>
+          <dd>
+            <span>{{ autenticacaoRef.senha }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.accessToken' | translate"
+              jhiTranslate="wattsUpEnergyApp.autenticacao.accessToken"
+              >Access Token</span
+            >
+          </dt>
+          <dd>
+            <span>{{ autenticacaoRef.accessToken }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.autenticacao.help.tokenType' | translate"
+              jhiTranslate="wattsUpEnergyApp.autenticacao.tokenType"
+              >Token Type</span
+            >
+          </dt>
+          <dd>
+            <span>{{ autenticacaoRef.tokenType }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autenticacao', autenticacaoRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

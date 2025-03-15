@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052106",
+    "rest": "/teleassistencia/diaexcepcional/CadastrarDiaExcepcional"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Dados do dia excepcional",
+      "fieldName": "dadosdiaexcepcional",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Chave do dia excepcional a ser excluído",
+      "fieldName": "chave",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Apidiaexcepcional",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

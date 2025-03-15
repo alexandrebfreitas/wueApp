@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "rest": "/hidrologia/previsoes/{reservatorio}/vazao-diaria"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Identificador do reservatório",
+      "fieldName": "reservatorio",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data de início da previsão",
+      "fieldName": "datainicioprevisao",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data de validade da previsão",
+      "fieldName": "datavalidadeprevisao",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "GrandezasPrevistas",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "resultados",
+      "relationshipName": "resultados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

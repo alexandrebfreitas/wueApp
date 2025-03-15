@@ -1,0 +1,146 @@
+{
+  "annotations": {
+    "rest": "/programacao/usina/ListarUsinasRepresentadas"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Não há parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da usina",
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Nome da usina",
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Tipo de usina (ex.: UHE)",
+      "fieldName": "tipo",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Prioridade (opcional)",
+      "fieldName": "prioridade",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Data do PDP",
+      "fieldName": "datapdp",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Número do patamar",
+      "fieldName": "patamarnumero",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Hora do patamar (readOnly)",
+      "fieldName": "patamarhora",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Valor do insumo – Empresa",
+      "fieldName": "patamarvalorEmp",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Valor do insumo – Proposta",
+      "fieldName": "patamarvalorPro",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Valor do insumo – Pré-aprovação",
+      "fieldName": "patamarvalorPre",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Valor do insumo – Supervisão",
+      "fieldName": "patamarvalorSup",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Ano do PDP",
+      "fieldName": "ano",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Mês do PDP",
+      "fieldName": "mes",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Dia do PDP",
+      "fieldName": "dia",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Códigos das usinas (opcional)",
+      "fieldName": "codigosusinas",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Início do processamento",
+      "fieldName": "inicioprocessamento",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Término do processamento",
+      "fieldName": "terminoprocessamento",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Ano do PDP",
+      "fieldName": "requestAno",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Mês do PDP",
+      "fieldName": "requestMes",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Dia do PDP",
+      "fieldName": "requestDia",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Número da página",
+      "fieldName": "requestNumeropaginacao",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Itens por página",
+      "fieldName": "requestQuantidadepagina",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Códigos (opcional)",
+      "fieldName": "requestCodigosusinas",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Usina",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "dadoinsumopatamar",
+      "relationshipName": "dadoinsumopatamar",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "usinas",
+      "relationshipName": "usinas",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

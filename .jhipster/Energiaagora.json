@@ -1,0 +1,19 @@
+{
+  "annotations": {
+    "rest": "/energiaagora/GetBalancoEnergetico/null"
+  },
+  "applications": "*",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "name": "Energiaagora",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "resultados",
+      "relationshipName": "resultados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

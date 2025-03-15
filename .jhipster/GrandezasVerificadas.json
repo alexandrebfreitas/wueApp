@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "rest": "/hidrologia/reservatorios/{Identificador}/afluencia"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Identificador do reservatório",
+      "fieldName": "identificador",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data e hora de início do período",
+      "fieldName": "inicio",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data e hora de fim do período",
+      "fieldName": "fim",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "GrandezasVerificadas",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "resultados",
+      "relationshipName": "resultados",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

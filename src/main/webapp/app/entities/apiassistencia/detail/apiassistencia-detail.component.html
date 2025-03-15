@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (apiassistencia(); as apiassistenciaRef) {
+      <div>
+        <h2 data-cy="apiassistenciaDetailsHeading">
+          <span jhiTranslate="wattsUpEnergyApp.apiassistencia.detail.title">Apiassistencia</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ apiassistenciaRef.id }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.apiassistencia.help.filtro' | translate"
+              jhiTranslate="wattsUpEnergyApp.apiassistencia.filtro"
+              >Filtro</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiassistenciaRef.filtro }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.apiassistencia.help.dadosassistencia' | translate"
+              jhiTranslate="wattsUpEnergyApp.apiassistencia.dadosassistencia"
+              >Dadosassistencia</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiassistenciaRef.dadosassistencia }}</span>
+          </dd>
+          <dt>
+            <span
+              [ngbTooltip]="'wattsUpEnergyApp.apiassistencia.help.chave' | translate"
+              jhiTranslate="wattsUpEnergyApp.apiassistencia.chave"
+              >Chave</span
+            >
+          </dt>
+          <dd>
+            <span>{{ apiassistenciaRef.chave }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/apiassistencia', apiassistenciaRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

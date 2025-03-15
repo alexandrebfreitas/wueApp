@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-apidiaexcepcional-heading"
+        data-cy="ApidiaexcepcionalCreateUpdateHeading"
+        jhiTranslate="wattsUpEnergyApp.apidiaexcepcional.home.createOrEditLabel"
+      >
+        Create or edit a Apidiaexcepcional
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="wattsUpEnergyApp.apidiaexcepcional.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dadosdiaexcepcional"
+            [ngbTooltip]="'wattsUpEnergyApp.apidiaexcepcional.help.dadosdiaexcepcional' | translate"
+            jhiTranslate="wattsUpEnergyApp.apidiaexcepcional.dadosdiaexcepcional"
+            >Dadosdiaexcepcional</label
+          >
+          <textarea
+            class="form-control"
+            name="dadosdiaexcepcional"
+            id="field_dadosdiaexcepcional"
+            data-cy="dadosdiaexcepcional"
+            formControlName="dadosdiaexcepcional"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_chave"
+            [ngbTooltip]="'wattsUpEnergyApp.apidiaexcepcional.help.chave' | translate"
+            jhiTranslate="wattsUpEnergyApp.apidiaexcepcional.chave"
+            >Chave</label
+          >
+          <input type="text" class="form-control" name="chave" id="field_chave" data-cy="chave" formControlName="chave" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

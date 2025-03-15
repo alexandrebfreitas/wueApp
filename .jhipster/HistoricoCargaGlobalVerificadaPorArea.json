@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "rest": "/cargaglobal/cargav"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Sem parâmetros",
+      "fieldName": "nenhuma",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Código da área de carga",
+      "fieldName": "codAreacarga",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data da medição (horário de Brasília)",
+      "fieldName": "datReferencia",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Data/hora em UTC",
+      "fieldName": "dinReferenciautc",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Carga global (MW)",
+      "fieldName": "valCargaglobal",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Carga global consistente (MW)",
+      "fieldName": "valCargaglobalcons",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Valor de consistência",
+      "fieldName": "valConsistencia",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Carga supervisionada",
+      "fieldName": "valCargasup",
+      "fieldType": "Double"
+    },
+    {
+      "documentation": "Carga não supervisionada",
+      "fieldName": "valCargansup",
+      "fieldType": "Double"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HistoricoCargaGlobalVerificadaPorArea",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

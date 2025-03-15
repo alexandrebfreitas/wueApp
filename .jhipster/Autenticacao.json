@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052110",
+    "rest": "/autenticar"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Usuário para autenticação",
+      "fieldName": "usuario",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Senha do usuário",
+      "fieldName": "senha",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Token de acesso",
+      "fieldName": "accessToken",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Tipo do token",
+      "fieldName": "tokenType",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Autenticacao",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -8,7 +8,12 @@
       "entities": {
         "main": "Entities",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "adminAuthority": "Authority"
+        "apiassistencia": "Apiassistencia",
+        "apidiaexcepcional": "Apidiaexcepcional",
+        "apiindicador": "Apiindicador",
+        "apiperiodoassistencia": "Apiperiodoassistencia",
+        "assistencias": "Assistencias",
+        "autenticacao": "Autenticacao"
       },
       "account": {
         "main": "Account",

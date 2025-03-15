@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20250315052108",
+    "rest": "/teleassistencia/periodo/CadastrarPeriodo"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Dados do período a ser cadastrado",
+      "fieldName": "dadosperiodo",
+      "fieldType": "TextBlob"
+    },
+    {
+      "documentation": "Chave do período a ser excluído",
+      "fieldName": "chave",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Apiperiodoassistencia",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

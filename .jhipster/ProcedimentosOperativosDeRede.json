@@ -1,0 +1,18 @@
+{
+  "annotations": {
+    "rest": "/site/mpo/"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Confirmação do processamento",
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "ProcedimentosOperativosDeRede",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

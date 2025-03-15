@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "rest": "/cargaglobal/historicocargaglobal/{tipoHistorico}"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "documentation": "Ex: Diario, Semanal, Mensal, Anual",
+      "fieldName": "tipohistorico",
+      "fieldType": "String"
+    },
+    {
+      "documentation": "Página atual",
+      "fieldName": "pagina",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Registros por página",
+      "fieldName": "tamanhopagina",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Total de registros",
+      "fieldName": "total",
+      "fieldType": "Integer"
+    },
+    {
+      "documentation": "Total de páginas",
+      "fieldName": "quantidadepaginas",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HistoricoCargaGlobal",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "historicocarga",
+      "relationshipName": "historicocarga",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
